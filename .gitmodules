@@ -7,3 +7,6 @@
 [submodule "kuka_cam"]
 	path = kuka_cam
 	url = https://github.com/h2r/kuka_cam.git
+[submodule "realsense"]
+	path = realsense
+	url = https://github.com/intel-ros/realsense.git
