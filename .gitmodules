@@ -1,3 +1,9 @@
 [submodule "iiwa_robotiq"]
 	path = iiwa_robotiq
 	url = https://github.com/h2r/iiwa_robotiq.git
+[submodule "iiwa_stack"]
+	path = iiwa_stack
+	url = https://github.com/IFL-CAMP/iiwa_stack.git
+[submodule "kuka_cam"]
+	path = kuka_cam
+	url = https://github.com/h2r/kuka_cam.git
