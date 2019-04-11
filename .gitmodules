@@ -10,3 +10,6 @@
 [submodule "realsense"]
 	path = realsense
 	url = https://github.com/intel-ros/realsense.git
+[submodule "robotiq"]
+	path = robotiq
+	url = https://github.com/ros-industrial/robotiq.git
