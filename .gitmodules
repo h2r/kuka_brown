@@ -1,0 +1,3 @@
+[submodule "iiwa_robotiq"]
+	path = iiwa_robotiq
+	url = https://github.com/h2r/iiwa_robotiq.git
