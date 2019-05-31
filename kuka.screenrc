@@ -48,6 +48,9 @@ stuff "roslaunch kuka_cam kuka_cam.launch cam_1:=on cam_2:=on cam_3:=on cam_4:=o
 screen -t " rviz"
 stuff "rosrun rviz rviz -d $KUKA_WS_PATH/src/kuka_brown/kuka.rviz"
 
+screen -t " rviz sensors only"
+stuff "rosrun rviz rviz -d $KUKA_WS_PATH/src/kuka_brown/kuka_realsense_only.rviz"
+
 screen -t " gripper manual controller"
 stuff "rosrun robotiq_3f_gripper_control Robotiq3FGripperSimpleController.py" # Don't run this until startup complete and arm enabled
 

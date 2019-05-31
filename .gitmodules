@@ -13,3 +13,6 @@
 [submodule "robotiq"]
 	path = robotiq
 	url = https://github.com/ros-industrial/robotiq.git
+[submodule "kuka_calib"]
+	path = kuka_calib
+	url = https://github.com/h2r/kuka_calib
