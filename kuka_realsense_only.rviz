@@ -197,11 +197,18 @@ Visualization Manager:
       Use Fixed Frame: true
       Use rainbow: true
       Value: true
+    - Class: rviz/Axes
+      Enabled: true
+      Length: 1
+      Name: Axes
+      Radius: 0.0500000007
+      Reference Frame: <Fixed Frame>
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: cam_1_depth_frame
+    Fixed Frame: cam_3_color_optical_frame
     Frame Rate: 30
   Name: root
   Tools:
