@@ -45,6 +45,9 @@ stuff "roslaunch iiwa_robotiq_bringup iiwa7_robotiq_bringup.launch rviz_moveit:=
 screen -t " cameras"
 stuff "roslaunch kuka_cam kuka_cam.launch cam_1:=on cam_2:=on cam_3:=on cam_4:=on cam_5:=on"
 
+screen -t " calibration"
+stuff "roslaunch kuka_calib calibrate_all.launch"
+
 screen -t " rviz"
 stuff "rosrun rviz rviz -d $KUKA_WS_PATH/src/kuka_brown/kuka.rviz"
 
