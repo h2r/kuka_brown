@@ -16,3 +16,6 @@
 [submodule "kuka_calib"]
 	path = kuka_calib
 	url = https://github.com/h2r/kuka_calib
+[submodule "lcsr_tf_tools"]
+	path = lcsr_tf_tools
+	url = https://github.com/jhu-lcsr/lcsr_tf_tools.git
