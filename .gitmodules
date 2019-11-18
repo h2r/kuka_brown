@@ -19,3 +19,6 @@
 [submodule "lcsr_tf_tools"]
 	path = lcsr_tf_tools
 	url = https://github.com/jhu-lcsr/lcsr_tf_tools.git
+[submodule "kalibr"]
+	path = kalibr
+	url = https://github.com/h2r/kalibr
