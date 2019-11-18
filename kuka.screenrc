@@ -33,30 +33,40 @@ acladd oberlin
 acladd stefie10
 
 screen -t " roscore"
-stuff "roscore\n"
-stuff ""
+stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
+stuff "roscore"
+stuff "\n"
 
 screen -t " URDF upload"
+stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
 stuff "roslaunch iiwa_robotiq_description iiwa7_robotiq_upload.launch"
 
 screen -t " bringup"
+stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
 stuff "roslaunch iiwa_robotiq_bringup iiwa7_robotiq_bringup.launch rviz_moveit:=true" # Don't run this until startup complete and arm enabled
 
 screen -t " cameras"
+stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
 stuff "roslaunch kuka_cam kuka_cam.launch cam_1:=on cam_2:=on cam_3:=on cam_4:=on cam_5:=on"
 
 screen -t " calibration"
+stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
 stuff "roslaunch kuka_calib calibrate_all.launch"
 
 screen -t " rviz"
+stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
 stuff "rosrun rviz rviz -d $KUKA_WS_PATH/src/kuka_brown/kuka.rviz"
 
 screen -t " rviz sensors only"
+stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
 stuff "rosrun rviz rviz -d $KUKA_WS_PATH/src/kuka_brown/kuka_realsense_only.rviz"
 
 screen -t " gripper manual controller"
+stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
 stuff "rosrun robotiq_3f_gripper_control Robotiq3FGripperSimpleController.py" # Don't run this until startup complete and arm enabled
 
 screen -t " free"
+stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
 
 screen -t " free"
+stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
