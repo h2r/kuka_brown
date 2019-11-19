@@ -49,10 +49,6 @@ screen -t " cameras"
 stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
 stuff "roslaunch kuka_cam kuka_cam.launch cam_1:=on cam_2:=on cam_3:=on cam_4:=on cam_5:=on"
 
-screen -t " calibration"
-stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
-stuff "roslaunch kuka_calib calibrate_all.launch"
-
 screen -t " rviz"
 stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
 stuff "rosrun rviz rviz -d $KUKA_WS_PATH/src/kuka_brown/kuka.rviz"
