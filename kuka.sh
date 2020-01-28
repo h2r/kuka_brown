@@ -13,3 +13,8 @@ function save_cam_images()
 {
 	rosrun image_view extract_images _sec_per_frame:=0.01 image:=/cam_$1/color/image_raw
 }
+
+function save_cam_clouds()
+{
+	rosrun pcl_ros pointcloud_to_pcd input:=/cam_$1/depth/color/points
+}
