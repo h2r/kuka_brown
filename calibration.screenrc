@@ -1,0 +1,65 @@
+#
+# various settings suggested by other users
+#
+# derived from the Paradox pair programming screenrc, UChicago 2010
+#   ~ yes, we are all total newbs ~
+#
+
+startup_message off
+
+#defscrollback 5000
+defscrollback 5000
+
+escape ``
+
+# this hard status was stolen from the net, all credit goes to its originator
+hardstatus             alwayslastline
+#hardstatus string '%{= mK}%-Lw%{= KW}%50>%n%f* %t%{= mK}%+Lw%< %{= kG}%-=%D %d %M %Y %c:%s%{-}'
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
+
+# A hint for using multiuser mode:  make sure that both parties have identically
+# sized terminals, otherwise there could be graphical mismatches and undrawn text
+# for one party :(  .
+
+# turn multiuser mode on so others can connect.
+multiuser on
+
+# add the specified user to this screen session so that they can connect.
+# the initiating user is allowed automatically, but add both so either can
+# run this script without modification.
+
+#acladd gen
+acladd oberlin
+acladd stefie10
+
+screen -t " roscore"
+stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
+stuff "roscore"
+stuff "\n"
+
+screen -t " cameras"
+stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
+stuff "roslaunch kuka_cam kuka_cam.launch cam_1:=on cam_2:=on cam_3:=on cam_4:=on cam_5:=on calib_mode:=true"
+
+screen -t " RGB rviz"
+stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
+stuff "rosrun rviz rviz -d $KUKA_WS_PATH/src/kuka_brown/rgb.rviz"
+
+screen -t " rosbag"
+stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
+stuff "rosbag record /cam_1/color/image_raw /cam_2/color/image_raw /cam_3/color/image_raw /cam_4/color/image_raw /cam_5/color/image_raw"
+
+screen -t " kalibr"
+stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
+stuff "kalibr_calibrate_cameras --bag <BAG_PATH_HERE>.bag --topics /cam_1/color/image_raw /cam_2/color/image_raw /cam_3/color/image_raw /cam_4/color/image_raw /cam_5/color/image_raw --models pinhole-radtan pinhole-radtan pinhole-radtan pinhole-radtan pinhole-radtan --target ~/kuka_ws/src/kuka_brown/kalibr/aprilgrid.yaml"
+
+screen -t " kalibr output to tf conversion"
+stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
+stuff "python ~/kuka_ws/src/kuka_brown/kuka_calib/scripts/kalibr_output_to_tf_sh_files.py --yaml_file /home/mcorsaro/camchain-<ADD_DATE_HERE>.yaml --base_camera_name cam_3"
+
+screen -t " base cam to world calibration"
+stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
+stuff "roslaunch kuka_calib calibration.launch cam_num:=3"
+
+screen -t " free"
+stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
