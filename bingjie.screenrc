@@ -43,11 +43,11 @@ stuff "roslaunch iiwa_robotiq_description iiwa7_robotiq_upload.launch"
 
 screen -t " bringup"
 stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
-stuff "roslaunch iiwa_robotiq_bringup iiwa7_robotiq_bringup.launch rviz_moveit:=true" # Don't run this until startup complete and arm enabled
+stuff "roslaunch iiwa_robotiq_bringup iiwa7_robotiq_bringup.launch rviz_moveit:=false" # Don't run this until startup complete and arm enabled
 
 screen -t " commander_listener"
 stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
-stuff "roslaunch iiwa_robotiq_bringup iiwa7_robotiq_bringup.launch rviz_moveit:=true" # Don't run this until startup complete and arm enabled
+stuff "roslaunch push_and_grasp grasp_push_listener.launch"
 
 screen -t " cameras"
 stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
@@ -55,7 +55,7 @@ stuff "roslaunch kuka_cam kuka_cam.launch cam_1:=off cam_2:=on cam_3:=on cam_4:=
 
 screen -t " rviz"
 stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
-stuff "rosrun rviz rviz -d /home/mcorsaro/kuka_ws/src/kuka_brown/kuka_realsense_only.rviz"
+stuff "rosrun rviz rviz -d /home/mcorsaro/kuka_ws/src/kuka_brown/bingjie.rviz"
 
 screen -t " gripper manual controller"
 stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
