@@ -287,6 +287,7 @@ Visualization Manager:
         cam_3 frame: true
         fingers: true
         grasp pose: true
+        pregrasp: true
         world frame: true
       Zoom Factor: 1
     - Class: moveit_rviz_plugin/Trajectory
@@ -455,6 +456,13 @@ Visualization Manager:
       Name: grasp pose
       Radius: 0.00999999978
       Reference Frame: grasp_pose
+      Value: true
+    - Class: rviz/Axes
+      Enabled: true
+      Length: 0.100000001
+      Name: pregrasp
+      Radius: 0.00999999978
+      Reference Frame: pregrasp_pose
       Value: true
   Enabled: true
   Global Options:
