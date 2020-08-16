@@ -8,6 +8,8 @@ export ROS_IP=138.16.161.135
 export ROS_MASTER_URI=http://$ROS_IP:11311
 
 source $KUKA_WS_PATH/src/kuka_brown/kuka_cam/kuka_cam.sh
+export PATH=/usr/local/cuda-10.0/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64:$LD_LIBRARY_PATH
 
 function save_cam_images()
 {
