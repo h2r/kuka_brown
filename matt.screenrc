@@ -55,7 +55,7 @@ stuff "rosrun rviz rviz -d $KUKA_WS_PATH/src/kuka_brown/matt.rviz"
 
 screen -t " commander"
 stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
-stuff "roslaunch grasp_type_ros commander.launch"
+stuff "roslaunch grasp_type_ros commander.launch num_types:=5"
 
 screen -t " evaluator"
 stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
