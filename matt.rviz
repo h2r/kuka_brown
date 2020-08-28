@@ -9,6 +9,7 @@ Panels:
         - /RobotModel1/Links1
         - /PointCloud21
         - /Trajectory1
+        - /PointCloud22
       Splitter Ratio: 0.5
     Tree Height: 843
   - Class: rviz/Selection
@@ -61,6 +62,10 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
+        camera_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         finger_1_link_0:
           Alpha: 1
           Show Axes: false
@@ -130,6 +135,11 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        gripper_cable_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         iiwa_link_0:
           Alpha: 1
           Show Axes: false
@@ -183,11 +193,21 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+        structure_sensor_model:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         tool0:
           Alpha: 1
           Show Axes: false
           Show Trail: false
         world:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        wrist_cable_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -273,6 +293,10 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
+        camera_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         finger_1_link_0:
           Alpha: 1
           Show Axes: false
@@ -342,6 +366,11 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        gripper_cable_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         iiwa_link_0:
           Alpha: 1
           Show Axes: false
@@ -395,11 +424,21 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+        structure_sensor_model:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         tool0:
           Alpha: 1
           Show Axes: false
           Show Trail: false
         world:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        wrist_cable_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -415,6 +454,36 @@ Visualization Manager:
       State Display Time: 0.05 s
       Trail Step Size: 1
       Trajectory Topic: /iiwa/move_group/display_planned_path
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: ""
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 4096
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: PointCloud2
+      Position Transformer: ""
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 6
+      Size (m): 0.00999999978
+      Style: Points
+      Topic: /iiwa/grasp_candidate_labeled_cloud
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
       Value: true
   Enabled: true
   Global Options:
