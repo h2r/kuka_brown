@@ -22,6 +22,4 @@
 [submodule "kalibr"]
 	path = kalibr
 	url = https://github.com/h2r/kalibr
-[submodule "ompl"]
-	path = ompl
-	url = https://github.com/ompl/ompl.git
+
