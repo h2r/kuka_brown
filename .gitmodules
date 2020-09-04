@@ -26,3 +26,6 @@
 [submodule "ompl"]
 	path = ompl
 	url = https://github.com/h2r/ompl.git
+[submodule "fcl"]
+	path = fcl
+	url = https://github.com/flexible-collision-library/fcl
