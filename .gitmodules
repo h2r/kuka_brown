@@ -22,13 +22,3 @@
 [submodule "kalibr"]
 	path = kalibr
 	url = https://github.com/h2r/kalibr
-
-[submodule "ompl"]
-	path = ompl
-	url = https://github.com/h2r/ompl.git
-[submodule "fcl_catkin"]
-	path = fcl_catkin
-	url = https://github.com/h2r/fcl_catkin.git
-[submodule "moveit"]
-	path = moveit
-	url = https://github.com/h2r/moveit.git
