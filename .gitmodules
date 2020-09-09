@@ -22,3 +22,6 @@
 [submodule "kalibr"]
 	path = kalibr
 	url = https://github.com/h2r/kalibr
+[submodule "moveit_suite"]
+	path = moveit_suite
+	url = https://github.com/h2r/moveit_suite.git
