@@ -51,7 +51,7 @@ stuff "roslaunch kuka_cam structure.launch"
 
 screen -t " rviz"
 stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
-stuff "rosrun rviz rviz -d $KUKA_WS_PATH/src/kuka_brown/matt.rviz"
+stuff "rosrun rviz rviz -d ~/kuka_ws/src/kuka_brown/matt.rviz"
 
 screen -t " commander"
 stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
