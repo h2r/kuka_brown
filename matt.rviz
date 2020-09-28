@@ -7,9 +7,6 @@ Panels:
         - /Global Options1
         - /Status1
         - /RobotModel1/Links1
-        - /PointCloud21
-        - /Trajectory1
-        - /PointCloud22
       Splitter Ratio: 0.5
     Tree Height: 843
   - Class: rviz/Selection
@@ -31,6 +28,8 @@ Panels:
     Name: Time
     SyncMode: 0
     SyncSource: ""
+Toolbars:
+  toolButtonStyle: 2
 Visualization Manager:
   Class: ""
   Displays:
@@ -184,6 +183,16 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+        mat:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        obj_box:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         palm:
           Alpha: 1
           Show Axes: false
@@ -415,6 +424,16 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+        mat:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        obj_box:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         palm:
           Alpha: 1
           Show Axes: false
