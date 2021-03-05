@@ -62,6 +62,11 @@ stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
 stuff "source ~/kuka_ws/virtualenvs/tf-1.14/bin/activate\n"
 stuff "python ~/kuka_ws/src/grasp_type_ros/scripts/evaluate_grasps.py"
 
+screen -t " segmenter"
+stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
+stuff "source ~/installations/virtualenvs/tf-maskrcnn-3.5/bin/activate\n"
+stuff "python ~/kuka_ws/src/grasp_type_ros/scripts/segment_depth_images.py"
+
 screen -t " gripper manual controller"
 stuff "source ~/kuka_ws/src/kuka_brown/kuka.sh\n"
 stuff "rosrun robotiq_3f_gripper_control Robotiq3FGripperSimpleController.py" # Don't run this until startup complete and arm enabled
